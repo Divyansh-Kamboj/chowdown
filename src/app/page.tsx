@@ -127,14 +127,14 @@ export default function Home() {
           <div className="space-y-2">
             <div className="text-base text-gray-300 font-bold uppercase tracking-widest">[ INPUT_02 :: BUDGET_CONSTRAINT ]</div>
             <div className="grid grid-cols-3 gap-4">
-              {priceOptions.map((option, index) => (
+              {priceOptions.map((option) => (
                 <button
                   key={option.id}
                   onClick={() => setPricePreference(option.id)}
-                  className={`h-16 text-xl font-bold uppercase transition-all duration-75 border-2 border-neon-purple bg-black hover:border-white ${
+                  className={`h-16 border-2 bg-black text-xl font-bold uppercase transition-all duration-75 ${
                     pricePreference === option.id
-                      ? 'text-neon-purple'
-                      : 'text-white'
+                      ? 'border-[#d946ef] text-[#d946ef]'
+                      : 'border-[#d946ef] text-white hover:border-white'
                   }`}
                 >
                   {option.label}
