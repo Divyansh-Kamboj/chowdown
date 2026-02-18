@@ -119,7 +119,7 @@ export default function Home() {
               value={vibe}
               onChange={(e) => setVibe(e.target.value)}
               placeholder="> ENTER_CRAVING_PARAMETERS..."
-              className="w-full min-h-[120px] resize-none bg-black border-2 border-neon-purple p-4 text-xl text-white placeholder:text-gray-600 focus:border-neon-purple hover:border-white focus:outline-none focus:shadow-hard transition-all duration-75"
+              className="w-full min-h-[120px] resize-none bg-black border-2 border-[#d946ef] p-4 text-xl text-white placeholder:text-gray-600 hover:border-white focus:border-white focus:outline-none focus:shadow-hard transition-all duration-75"
             />
           </div>
 
@@ -134,7 +134,7 @@ export default function Home() {
                   className={`h-16 border-2 bg-black text-xl font-bold uppercase transition-all duration-75 ${
                     pricePreference === option.id
                       ? 'border-[#d946ef] text-[#d946ef]'
-                      : 'border-[#d946ef] text-white hover:border-white'
+                      : 'border-[#d946ef] text-white hover:border-white hover:text-[#d946ef]'
                   }`}
                 >
                   {option.label}
@@ -148,7 +148,7 @@ export default function Home() {
             <button
               onClick={handleSearch}
               disabled={loading}
-              className="group relative w-full h-20 bg-black border-2 border-neon-purple text-neon-purple font-black text-2xl uppercase tracking-widest shadow-hard hover:translate-y-1 hover:shadow-none hover:bg-neon-purple hover:text-white active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full h-20 bg-black border-2 border-[#d946ef] text-white font-black text-2xl uppercase tracking-widest shadow-hard hover:translate-y-1 hover:shadow-none hover:border-white hover:text-[#d946ef] active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
               EXECUTE_SEARCH
             </button>
