@@ -1,0 +1,6 @@
+googlemaps
+openai
+supabase
+python-dotenv
+tqdm
+tenacity
