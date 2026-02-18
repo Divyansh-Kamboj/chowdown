@@ -126,15 +126,15 @@ export default function Home() {
           {/* Price Toggles */}
           <div className="space-y-2">
             <div className="text-base text-gray-300 font-bold uppercase tracking-widest">[ INPUT_02 :: BUDGET_CONSTRAINT ]</div>
-            <div className="grid grid-cols-3 gap-0 border-2 border-neon-purple hover:border-white">
+            <div className="grid grid-cols-3 gap-4">
               {priceOptions.map((option, index) => (
                 <button
                   key={option.id}
                   onClick={() => setPricePreference(option.id)}
-                  className={`h-16 text-xl font-bold uppercase transition-all duration-75 border-r-2 last:border-r-0 border-white hover:bg-neon-purple hover:text-black ${
+                  className={`h-16 text-xl font-bold uppercase transition-all duration-75 border-2 border-neon-purple bg-black hover:border-white ${
                     pricePreference === option.id
-                      ? 'bg-neon-purple text-black'
-                      : 'bg-black text-white'
+                      ? 'text-neon-purple'
+                      : 'text-white'
                   }`}
                 >
                   {option.label}
@@ -150,7 +150,7 @@ export default function Home() {
               disabled={loading}
               className="group relative w-full h-20 bg-black border-2 border-neon-purple text-neon-purple font-black text-2xl uppercase tracking-widest shadow-hard hover:translate-y-1 hover:shadow-none hover:bg-neon-purple hover:text-white active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              EXECUTE_SEARCH<span className="animate-pulse">_</span>
+              EXECUTE_SEARCH
             </button>
             {loading && (
               <div className="mt-4 space-y-1 text-sm font-bold text-neon-purple">
