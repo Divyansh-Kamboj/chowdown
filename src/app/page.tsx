@@ -104,7 +104,7 @@ export default function Home() {
         {/* HEADER */}
         <header className="mb-12">
           <h1 className="text-5xl md:text-6xl font-black uppercase tracking-tighter">
-            CHOWDOWN_V1.0
+            CHOWDOWN
           </h1>
           <div className="mt-2 w-full h-1 bg-neon-purple shadow-hard" />
         </header>
@@ -114,19 +114,19 @@ export default function Home() {
           
           {/* Vibe Input */}
           <div className="space-y-2">
-            <label className="text-xs text-gray-500 font-bold uppercase tracking-widest">[ INPUT_01 :: VIBE_PARAMETERS ]</label>
+            <label className="text-base text-gray-300 font-bold uppercase tracking-widest">[ INPUT_01 :: VIBE_PARAMETERS ]</label>
             <textarea
               value={vibe}
               onChange={(e) => setVibe(e.target.value)}
               placeholder="> ENTER_CRAVING_PARAMETERS..."
-              className="w-full min-h-[120px] resize-none bg-black border-2 border-white p-4 text-xl text-white placeholder:text-gray-600 focus:border-neon-purple focus:outline-none focus:shadow-hard transition-all duration-75"
+              className="w-full min-h-[120px] resize-none bg-black border-2 border-neon-purple p-4 text-xl text-white placeholder:text-gray-600 focus:border-neon-purple hover:border-white focus:outline-none focus:shadow-hard transition-all duration-75"
             />
           </div>
 
           {/* Price Toggles */}
           <div className="space-y-2">
-            <div className="text-xs text-gray-500 font-bold uppercase tracking-widest">[ INPUT_02 :: BUDGET_CONSTRAINT ]</div>
-            <div className="grid grid-cols-3 gap-0 border-2 border-white">
+            <div className="text-base text-gray-300 font-bold uppercase tracking-widest">[ INPUT_02 :: BUDGET_CONSTRAINT ]</div>
+            <div className="grid grid-cols-3 gap-0 border-2 border-neon-purple hover:border-white">
               {priceOptions.map((option, index) => (
                 <button
                   key={option.id}
@@ -148,9 +148,9 @@ export default function Home() {
             <button
               onClick={handleSearch}
               disabled={loading}
-              className="group relative w-full h-20 bg-black border-2 border-neon-purple text-neon-purple font-black text-2xl uppercase tracking-widest shadow-hard hover:translate-y-1 hover:shadow-none hover:bg-neon-purple hover:text-black active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+              className="group relative w-full h-20 bg-black border-2 border-neon-purple text-neon-purple font-black text-2xl uppercase tracking-widest shadow-hard hover:translate-y-1 hover:shadow-none hover:bg-neon-purple hover:text-white active:translate-y-1 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              EXECUTE_SEARCH()<span className="animate-pulse">_</span>
+              EXECUTE_SEARCH<span className="animate-pulse">_</span>
             </button>
             {loading && (
               <div className="mt-4 space-y-1 text-sm font-bold text-neon-purple">
@@ -180,7 +180,7 @@ export default function Home() {
             return (
               <div
                 key={restaurant.id ?? `${restaurant.name}-${index}`}
-                className="group relative border-2 border-white bg-black p-5 hover:border-neon-purple transition-colors"
+                className="group relative border-2 border-neon-purple bg-black p-5 hover:border-white transition-colors"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div className="text-neon-purple text-lg font-bold">
